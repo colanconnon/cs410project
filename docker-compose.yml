@@ -43,7 +43,7 @@ services:
       restart: always
       volumes:
         - ./cs410videosearchengine/:/src
-        - /Users/colanconnon/.aws/:/root/.aws/
+        - /home/ubuntu/.aws/:/root/.aws/
       command: celery -A cs410videosearchengine worker -l info
       stdin_open: true
       tty: true
@@ -53,7 +53,7 @@ services:
       restart: always
       volumes:
         - ./cs410videosearchengine/:/src
-        - /Users/colanconnon/.aws/:/root/.aws/
+        - /home/ubuntu/.aws/:/root/.aws/
       command: celery -A cs410videosearchengine beat -l info
       stdin_open: true
       tty: true
