@@ -143,3 +143,4 @@ dmypy.json
 *.pid
 *.swp
 *.m4a
+*.retry

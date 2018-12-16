@@ -20,6 +20,7 @@
       version: master
       dest: "/home/{{ ansible_user }}/project"
       accept_hostkey: yes
+      force: yes
     become: no
 
   - name: docker compose up
