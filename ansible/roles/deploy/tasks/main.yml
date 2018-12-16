@@ -23,8 +23,8 @@
       force: yes
     become: no
 
-  - name: docker compose up
-    shell: docker-compose up -d --build --remove-orphans
-    args:
-      chdir: /home/{{ ansible_user }}/project
-    become: yes
+  # - name: docker compose up
+  #   shell: docker-compose up -d --build nginx
+  #   args:
+  #     chdir: /home/{{ ansible_user }}/project
+  #   become: yes
