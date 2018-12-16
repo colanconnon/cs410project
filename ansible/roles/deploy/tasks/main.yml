@@ -1,3 +1,19 @@
+  - name: docker compose up
+    shell: mkdir -p /home/{{ ansible_user }}/.aws/
+    become: yes
+
+  - name: copy aws config
+    copy:
+      src: /Users/colanconnon/.aws/config
+      dest: /home/{{ ansible_user }}/.aws/config
+    become: yes
+
+  - name: copy aws creds
+    copy:
+      src: /Users/colanconnon/.aws/credentials
+      dest: /home/{{ ansible_user }}/.aws/credentials
+    become: yes
+
   - name: clone repo
     git:
       repo: "{{ repo }}"
@@ -8,4 +24,6 @@
 
   - name: docker compose up
     shell: docker-compose up -d --build --remove-orphans
+    args:
+      chdir: /home/{{ ansible_user }}/project
     become: yes

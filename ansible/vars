@@ -3,5 +3,5 @@
 
 [all:vars]
 ansible_user=ubuntu
-repo=
+repo=https://github.com/colanconnon/cs410project
 ansible_python_interpreter=/usr/bin/python3
