@@ -1,0 +1,11 @@
+  - name: clone repo
+    git:
+      repo: "{{ repo }}"
+      version: master
+      dest: "/home/{{ ansible_user }}/project"
+      accept_hostkey: yes
+    become: no
+
+  - name: docker compose up
+    shell: docker-compose up -d --build --remove-orphans
+    become: yes
