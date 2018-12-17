@@ -41,9 +41,8 @@ class SearchEngineViewSet(viewsets.ViewSet):
                 if len(matches) > 0:
                     length, start, end = matches[0]
                     words = document_data.get('words')
-                    if len(words) < end and len(words) > start:
-                        document_data['start_match'] = words[start]['start_time']
-                        document_data['end_match'] = words[end]['end_time']
+                    document_data['start_match'] = words[start]['start_time']
+                    document_data['end_match'] = words[end]['end_time']
                 else:
                     document_data['start_match'] = None
                     document_data['end_match'] = None
