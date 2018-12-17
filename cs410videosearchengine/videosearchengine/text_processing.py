@@ -13,6 +13,7 @@ def remove_stop_words(text):
 
 
 def find_topics(text):
+    # https://scikit-learn.org/stable/auto_examples/applications/plot_topics_extraction_with_nmf_lda.html
     tf_vectorizer = CountVectorizer(stop_words='english')
     tf = tf_vectorizer.fit_transform(text)
     lda = LatentDirichletAllocation(
