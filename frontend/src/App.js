@@ -106,7 +106,7 @@ class SearchResults extends Component {
                 <div className="card" style={{width: "30rem"}}>
                 <video currentTime={Number(result.start_match)} className="card-img-top" controls src={result.url}></video>
                 <div className="card-body">
-                <p className="text-muted">Start Time: {Number(result.start_match) - 5} </p>
+                <p className="text-muted">Start Time: {Number(result.start_match)} </p>
                 <h5 className="card-title">Topics: {result.topics.join(", ")} </h5>
                 <p className="card-text"> Summary: {result.summary} </p>
                 </div>
