@@ -35,7 +35,6 @@ def search_videos(query):
         }
     }
     search_res = es.search(index=INDEX, body=es_query)
-    print(search_res)
     return search_res['hits']['hits']
 
 
