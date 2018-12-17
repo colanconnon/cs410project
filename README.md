@@ -40,27 +40,38 @@ The front end is using react.js to make the front end interactive.
 ## Functions
 
 Topic modeling
-
+----
 https://github.com/colanconnon/cs410project/blob/master/cs410videosearchengine/videosearchengine/text_processing.py#L15
 
 This function preprocessing the data using a count vectorizer and then uses LDA for topic modeling
 
-
+---
 https://github.com/colanconnon/cs410project/blob/master/cs410videosearchengine/videosearchengine/text_processing.py#L38
 
 Uses the summa library for summarization:
 
 https://pypi.org/project/summa/
 
+---
+https://github.com/colanconnon/cs410project/blob/master/cs410videosearchengine/videosearchengine/video_transcode.py#L12
+
+Triggering the transcode in aws, and waiting for it to finish
+---
+
+Triggering the transcode, topic modeling, and sumarizaton tied together.
+https://github.com/colanconnon/cs410project/blob/master/cs410videosearchengine/videosearchengine/tasks.py#L9
+
 
 
 For searching three different parts are used.
+----
 * Elastic search for finding documents that match the query
 https://github.com/colanconnon/cs410project/blob/master/cs410videosearchengine/videosearchengine/search.py#L20
 
+----
 *  spacy for finding where the phrase is in the video
 https://github.com/colanconnon/cs410project/blob/master/cs410videosearchengine/videosearchengine/search.py#L41
-
+------
 * This is the http handler for tying everything together.
 https://github.com/colanconnon/cs410project/blob/master/cs410videosearchengine/videosearchengine/views.py#L40
 
