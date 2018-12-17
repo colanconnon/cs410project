@@ -9,6 +9,10 @@ the video, topics, and a summary will extracted and then uploaded into elasticse
 docker-compose up -d --build will run the projects. You need to make sre that aws
 config makes it into ~/.aws/config
 
+docker-compose logs will give you logs for what is wrong.
+
+# testing it on the web
+
 The easiest way to test to this project is to visit: 
 http://34.224.88.106/
 
@@ -69,3 +73,6 @@ Uploading Videos
 ![Alt Text](https://github.com/colanconnon/cs410project/blob/master/uploading_videos.gif)
 
 Searching Videos
+
+![Alt Text](https://github.com/colanconnon/cs410project/blob/master/searching.gif)
+
